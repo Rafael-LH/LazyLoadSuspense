@@ -3,13 +3,13 @@ import './App.css'
 import Home from './pages/Home'
 import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail'
-import Pepito from './context/StaticContext'
+import StaticContext from './context/StaticContext'
 import {GifsContextProvider} from './context/GifsContext'
 import { Link, Route } from "wouter"
 
 export default function App() {
   return (
-  <Pepito.Provider value={{name: 'midudev',
+  <StaticContext.Provider value={{name: 'midudev',
   suscribeteAlCanal: true}}>
       <div className="App">
         <section className="App-content">
@@ -33,6 +33,6 @@ export default function App() {
           </GifsContextProvider>
         </section>
       </div>
-    </Pepito.Provider>
+    </StaticContext.Provider>
   )
 }
